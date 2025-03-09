@@ -7,7 +7,7 @@ import { UserGroupIcon,
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
-
+const path = usePathname();
 const links = [
     {
         name : 'accueil',
@@ -30,8 +30,8 @@ export default function NavLinks(){
     return(
     <>
     {
-        links.map(item =>{
-            const path = usePathname();
+        links.map((item) =>{
+            
             const Icon = item.icon;
 
             return(
