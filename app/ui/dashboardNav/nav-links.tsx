@@ -7,7 +7,6 @@ import { UserGroupIcon,
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
-const path = usePathname();
 const links = [
     {
         name : 'accueil',
@@ -27,6 +26,7 @@ const links = [
 ]
 
 export default function NavLinks(){
+    const path = usePathname();
     return(
     <>
     {
