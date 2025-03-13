@@ -47,7 +47,7 @@ async function seedInvoices(client) {
         await client.sql`CREATE EXTENSION IF NOT EXISTS "uuid-ossp"`;
         const createTable = client.sql` 
         CREATE TABLE IF NOT EXISTS invoices(
-       
+         id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
         customer_id UUID NOT NULL,
         amount INT NOT NULL,
         status VARCHAR(255) NOT NULL,
