@@ -28,9 +28,9 @@ async function seedUsers(client) {
                 INSERT INTO users(id,name,email,password)   
                 VALUES(${user.id},${user.name},${user.email},${hashedPassword})
                 ON CONFLICT (id) DO NOTHING;
-                `
-            })
-        )
+                `;
+            }),
+        );
         console.log(`seeded ${insertedUsers.length} users`);
         return {
             createTable,
